@@ -5,7 +5,6 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "export NODE_ENV=production && webpack --config ./webpack/webpack.config.prod.js",
-    "heroku-postbuild": "npm run build",
     "test": "export NODE_PATH=$PWD/src; echo $NODE_PATH; mocha --compilers js:./src/tests/compiler.js ./src/tests/*.spec.js",
     "lint": "eslint src",
     "start": "node ./server.js",
