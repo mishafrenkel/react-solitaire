@@ -6,7 +6,7 @@ module.exports = {
     './src/index'
   ],
   output: {
-    filename: 'index.js',
+    filename: 'bundle.js',
     path: path.join(__dirname, '..', '/dist/'),
     publicPath: '/dist/',
     library: 'react-solitaire',
