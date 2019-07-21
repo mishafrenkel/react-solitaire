@@ -8,8 +8,8 @@
     "heroku-postbuild": "npm run build",
     "test": "export NODE_PATH=$PWD/src; echo $NODE_PATH; mocha --compilers js:./src/tests/compiler.js ./src/tests/*.spec.js",
     "lint": "eslint src",
-    "start": "node ./server.js",
-    "start:prod": "node ./server.prod.js",
+    "start:dev": "node ./server.js",
+    "start": "node ./server.prod.js",
     "prepublish": "npm run lint && npm run test"
   },
   "keywords": [
