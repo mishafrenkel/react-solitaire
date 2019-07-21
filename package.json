@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "export NODE_ENV=production && webpack --config ./webpack/webpack.config.prod.js",
+    "heroku-postbuild": "npm run build",
     "test": "export NODE_PATH=$PWD/src; echo $NODE_PATH; mocha --compilers js:./src/tests/compiler.js ./src/tests/*.spec.js",
     "lint": "eslint src",
     "start": "node ./server.js",
@@ -28,6 +29,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.5.0",
     "babel-polyfill": "^6.5.0",
     "css-loader": "^0.22.0",
+    "express": "^4.17.1",
     "file-loader": "^0.8.5",
     "node-sass": "^3.4.1",
     "postcss-modules-extract-imports": "^1.0.0",
