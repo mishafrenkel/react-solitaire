@@ -6,20 +6,20 @@ module.exports = {
     './src/index'
   ],
   output: {
-      filename: 'index.js',
-      path: path.join(__dirname, '..', '/lib/'),
-      publicPath: '/lib/',
-      library: 'react-solitaire',
-      libraryTarget: 'umd'
+    filename: 'index.js',
+    path: path.join(__dirname, '..', '/dist/'),
+    publicPath: '/dist/',
+    library: 'react-solitaire',
+    libraryTarget: 'umd'
   },
   plugins: [
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': '"production"'
+      'process.env.NODE_ENV': '"production"'
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-          warnings: false
+        warnings: false
       }
     })
   ],
@@ -29,16 +29,16 @@ module.exports = {
   },
   module: {
     loaders: [{
-        test: /\.scss$/,
-        loaders: ["style", "css", "sass"] 
-      }, {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-      }, {
-        test: /\.(png|jpg|svg)$/,
-        loader: 'url-loader?limit=1048576'
-      }
+      test: /\.scss$/,
+      loaders: ["style", "css", "sass"]
+    }, {
+      test: /\.js$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+    }, {
+      test: /\.(png|jpg|svg)$/,
+      loader: 'url-loader?limit=1048576'
+    }
     ]
   }
 };
